@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTheme(savedTheme);
     } else {
         // If no theme is saved (first visit), default to 'light'
-        setTheme('light');
+        setTheme('dark');
     }
 
     // 2. Add an event listener to the toggle button for theme switching
