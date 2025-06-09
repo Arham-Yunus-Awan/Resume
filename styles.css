@@ -1,37 +1,146 @@
+/* --- Base Theme Variables (Light Mode Defaults) --- */
+:root {
+    /* Main Backgrounds */
+    --main-bg: #f8f9fa; /* Body background: Very light gray (Bootstrap default light) */
+    --section-bg: #ffffff; /* Section/Card background: Pure white */
+
+    /* Text Colors */
+    --main-text-color: #212529; /* General text color: Dark gray (Bootstrap default dark) */
+    --hero-text-color: white; /* Text within hero section: White */
+    --link-color: #6a11cb; /* Anchor link color: Your primary purple */
+    --muted-text-color: #6c757d; /* Bootstrap's default muted text color for light mode */
+
+
+    /* Primary/Accent Colors (from your current hero gradient & active states) */
+    --primary-gradient-start: #6a11cb; /* Hero gradient start: Your primary purple */
+    --primary-gradient-end: #2575fc; /* Hero gradient end: Your primary blue */
+    --primary-solid-color: #6a11cb; /* For nav active, timeline dot: Your primary purple */
+
+    /* Border & Shadow Colors */
+    --border-color-profile: white; /* For profile-img border: White */
+    --timeline-line-color: #dee2e6; /* For timeline vertical line: Light gray */
+    --box-shadow-color: rgba(0,0,0,0.05); /* For .section box-shadow: Subtle shadow */
+
+    /* Theme Toggle Button Colors (Light Mode - Now with solid background) */
+    --toggle-btn-bg: #0d6efd; /* Bootstrap primary blue */
+    --toggle-btn-text: white;
+    --toggle-btn-border: #0d6efd;
+}
+
+/* --- Dark Theme Overrides (Applied when body has data-theme='dark') --- */
+body[data-theme='dark'] {
+    /* Main Backgrounds */
+    --main-bg: #212529; /* Darker background: Bootstrap dark gray */
+    --section-bg: #343a40; /* Slightly lighter dark for sections: Darker gray */
+
+    /* Text Colors */
+    --main-text-color: #e0e0e0; /* Light gray text: Visible against dark backgrounds */
+    --hero-text-color: white; /* Can remain white for contrast with dark hero gradient */
+    --link-color: #a766ff; /* Lighter, brighter purple for links in dark mode */
+    --muted-text-color: #adb5bd; /* Lighter gray for muted text in dark mode */
+
+    /* Primary/Accent Colors (Slightly adjusted for dark mode readability) */
+    --primary-gradient-start: #5a0fac;
+    --primary-gradient-end: #1e60d9;
+    --primary-solid-color: #a766ff;
+
+    /* Border & Shadow Colors */
+    --border-color-profile: #555555;
+    --timeline-line-color: #495057;
+    --box-shadow-color: rgba(0,0,0,0.2);
+
+    /* Theme Toggle Button Colors (Dark Mode - Now with solid background) */
+    --toggle-btn-bg: #495057; /* Bootstrap dark gray */
+    --toggle-btn-text: #e0e0e0; /* Light text */
+    --toggle-btn-border: #495057;
+}
+
+/* --- Apply Variables to Your Existing Styles --- */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    background-color: var(--main-bg);
+    color: var(--main-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .hero-section {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    color: var(--hero-text-color);
     padding: 4rem 0;
     margin-bottom: 2rem;
     border-radius: 0 0 20px 20px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
+
 .profile-img {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 5px solid white;
+    border: 5px solid var(--border-color-profile);
+    transition: border-color 0.3s ease;
 }
+
 .section {
-    background: white;
+    background: var(--section-bg);
     border-radius: 10px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px var(--box-shadow-color);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
 .skill-badge {
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
+    color: var(--main-text-color); /* Ensure text is readable */
 }
+
+/* Fix for text-muted class */
+.text-muted {
+    color: var(--muted-text-color) !important; /* Use !important to override Bootstrap */
+}
+
+/* --- Theme Toggle Button Specific Styling --- */
+#themeToggleBtn {
+    background-color: var(--toggle-btn-bg);
+    color: var(--toggle-btn-text);
+    border-color: var(--toggle-btn-border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
 .nav-pills .nav-link.active {
-    background-color: #6a11cb;
+    background-color: var(--primary-solid-color);
+    transition: background-color 0.3s ease;
 }
-a {
-    color: #6a11cb;
+
+/* --- FIX for 'a' href links --- */
+/* Target all anchor tags that are NOT Bootstrap buttons */
+a:not(.btn) {
+    color: var(--link-color) !important; /* Use !important to ensure override */
+    transition: color 0.3s ease;
 }
+
+/* Ensure hover/focus states also follow the theme color */
+a:not(.btn):hover,
+a:not(.btn):focus {
+    color: var(--link-color) !important; /* Keep the color consistent on hover/focus */
+    opacity: 0.8; /* Optional: Add a subtle hover effect */
+    text-decoration: underline; /* Optional: Add underline on hover for clarity */
+}
+
+
+/* Ensure all text within sections inherits appropriate color */
+.section h1, .section h2, .section h3, .section h4, .section h5, .section h6,
+.section p, .section span, .section li {
+    color: inherit;
+}
+
+
 .timeline {
     position: relative;
     padding-left: 2rem;
@@ -43,7 +152,8 @@ a {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: #dee2e6;
+    background: var(--timeline-line-color);
+    transition: background 0.3s ease;
 }
 .timeline-item {
     position: relative;
@@ -57,5 +167,11 @@ a {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #6a11cb;
+    background: var(--primary-solid-color);
+    transition: background 0.3s ease;
+}
+
+.certificate-item {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
