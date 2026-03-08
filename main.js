@@ -17,6 +17,42 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
 
+// ── HAMBURGER MENU ────────────────────────────────────
+const hamburger    = document.getElementById('hamburger');
+const mobileNav    = document.getElementById('mobileNav');
+const mobileClose  = document.getElementById('mobileNavClose');
+const mobileLinks  = document.querySelectorAll('.mobile-link');
+
+function openMobileNav() {
+    hamburger.classList.add('open');
+    mobileNav.classList.add('open');
+    body.style.overflow = 'hidden';
+}
+
+function closeMobileNav() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', () => {
+    if (mobileNav.classList.contains('open')) {
+        closeMobileNav();
+    } else {
+        openMobileNav();
+    }
+});
+mobileClose.addEventListener('click', closeMobileNav);
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+});
+
+// Close on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMobileNav();
+});
+
 // ── EMAILJS ───────────────────────────────────────────
 (function () { emailjs.init("Dp-b-j8s-i4iHowEq"); })();
 
