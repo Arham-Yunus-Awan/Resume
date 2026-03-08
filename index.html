@@ -3,226 +3,386 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arham Yunus Awan - CV</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Arham Yunus Awan — AWS Serverless Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body data-theme="dark">
+<body>
 
-    <section id="home" class="hero-section position-relative">
-        <button id="themeToggleBtn" class="btn btn-outline-light position-absolute top-0 end-0 m-3 rounded-pill px-3 py-2" aria-label="Toggle day and night theme">
-            Switch to Dark
-        </button>
+<!-- ── NAV ────────────────────────────────────────────────── -->
+<nav>
+    <a href="#home" class="nav-logo">AYA<span style="color:var(--muted)">.</span></a>
+    <ul class="nav-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+        <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <a href="Arham_Yunus_Awan_CV.pdf" target="_blank" class="nav-cta">↓ Resume</a>
+    </div>
+</nav>
 
-        <div class="container text-center">
-            <img src="ArhamLatest.jpeg" alt="Profile Photo" class="profile-img rounded-circle mb-4">
-            <h1 class="display-4 fw-bold mb-3">Arham Yunus Awan</h1>
-            <p class="lead mb-4">AWS Serverless Engineer | Python Developer | Genesys Cloud Expert</p>
-            <p class="mb-4">Islamabad, Pakistan</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#contact" class="btn btn-light btn-lg px-4">Contact Me</a>
-                <a href="Profile.pdf" target="_blank" class="btn btn-outline-light btn-lg px-4"> <i class="bi bi-file-earmark-pdf"></i> Download CV</a>
+<!-- ── HERO ───────────────────────────────────────────────── -->
+<section id="home">
+    <div class="hero">
+        <div class="hero-left">
+            <div class="hero-tag">Available for opportunities</div>
+            <h1 class="hero-name">Arham<br><span>Yunus Awan</span></h1>
+            <p class="hero-title">AWS Serverless Engineer · AI/ML Developer · Genesys Cloud Specialist</p>
+            <p class="hero-desc">
+                Building production-grade cloud infrastructure and AI solutions for international clients.
+                Currently pursuing BS Artificial Intelligence while working remotely with a New Zealand based tech company.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">View Projects ↓</a>
+                <a href="#contact" class="btn-ghost">Get in Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div><div class="stat-num">2+</div><div class="stat-label">Years Experience</div></div>
+                <div><div class="stat-num">3.73</div><div class="stat-label">Current CGPA</div></div>
+                <div><div class="stat-num">4</div><div class="stat-label">Live Projects</div></div>
             </div>
         </div>
-    </section>
-    <div class="container">
-        <section id="about" class="section">
-            <h2 class="mb-4"><i class="bi bi-person-fill me-2"></i>About Me</h2>
-            <div class="row">
-                <div class="col-md-8">
-                    <p class="lead">I'm fascinated by the possibilities I have and could unlock learning about further IT skills.</p>
-                    <p>I always found it lovely to be able to apply my mathematics interest into programming and other computer concepts. I'm currently expanding my knowledge, as I believe everyone should always be doing, of programming and related fields. My knowledge of mathematics and computer has also helped me in preparing for both my A-level exams as well as future practical life.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Quick Info</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="bi bi-telephone me-2"></i> +92 3353 777733</li>
-                                <li class="mb-2"><i class="bi bi-envelope me-2"></i> arhamyunus@outlook.com</li>
-                                <li class="mb-2"><i class="bi bi-linkedin me-2"></i> <a href="https://www.linkedin.com/in/arham-yunus-awan" target="_blank">linkedin.com/in/arham-yunus-awan</a></li>
-                                <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Islamabad, Pakistan</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="hero-right">
+            <div class="photo-frame">
+                <img src="ArhamLatest.jpeg" alt="Arham Yunus Awan">
+                <div class="photo-badge">
+                    <div class="photo-badge-text">📍 Islamabad, PK</div>
+                    <div class="photo-badge-num">Open to Remote</div>
                 </div>
             </div>
-        </section>
-
-        <section id="experience" class="section">
-            <h2 class="mb-4"><i class="bi bi-briefcase-fill me-2"></i>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>AWS Serverless Engineer | Genesys Cloud Integration Specialist</h4>
-                    <h5 class="text-muted">Astro Cloud Ltd • April 2024 - Present</h5>
-                    <p>Hamilton, Waikato, New Zealand</p>
-                    <ul>
-                        <li>Developing & optimizing AWS serverless solutions using Lambda, DynamoDB, API Gateway, and S3</li>
-                        <li>Integrating Genesys Cloud APIs with AWS services for real-time call center automation</li>
-                        <li>Building & maintaining cloud data pipelines with Athena & AWS Glue for analytics</li>
-                        <li>Automating API-driven workflows to improve operational efficiency</li>
-                        <li>Enhancing cloud security & scalability for high-traffic applications</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h4>Project Intern</h4>
-                    <h5 class="text-muted">Lahore University of Management Sciences • August 2021 - March 2022</h5>
-                    <p>Lahore, Punjab, Pakistan</p>
-                    <ul>
-                        <li>Processed and cleaned Urdu audio data collected from volunteers for training an ML model</li>
-                        <li>Applied audio preprocessing techniques such as noise reduction, trimming, and format conversion</li>
-                        <li>Annotated and organized large datasets to ensure quality training data for speech recognition models</li>
-                        <li>Assisted in data management tasks, ensuring proper storage and retrieval of audio files</li>
-                        <li>Supported project coordination with small management and documentation tasks</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section">
-            <h2 class="mb-4"><i class="bi bi-tools me-2"></i>Skills</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4 class="mt-3">Top Skills</h4>
-                    <div class="mb-3">
-                        <span class="badge bg-primary skill-badge">AWS Cloud Development</span>
-                        <span class="badge bg-primary skill-badge">Serverless Architecture</span>
-                        <span class="badge bg-primary skill-badge">API Design & Development</span>
-                        <span class="badge bg-primary skill-badge">Genesys Data Integration</span>
-                        <span class="badge bg-primary skill-badge">Cloud Data Pipelines</span>
-                    </div>
-
-                    <h4 class="mt-3">Technical Skills</h4>
-                    <div class="mb-3">
-                        <span class="badge bg-success skill-badge">Python</span>
-                        <span class="badge bg-success skill-badge">AWS Lambda</span>
-                        <span class="badge bg-success skill-badge">API Gateway</span>
-                        <span class="badge bg-success skill-badge">DynamoDB</span>
-                        <span class="badge bg-success skill-badge">AWS S3</span>
-                        <span class="badge bg-success skill-badge">AWS Glue</span>
-                        <span class="badge bg-success skill-badge">AWS Athena</span>
-                        <span class="badge bg-success skill-badge">Genesys Cloud</span>
-                        <span class="badge bg-success skill-badge">Flask</span>
-                        <span class="badge bg-success skill-badge">Node.js</span>
-                        <span class="badge bg-success skill-badge">React</span>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="mt-3">Languages</h4>
-                    <div class="mb-3">
-                        <span class="badge bg-info skill-badge">English (Professional Working)</span>
-                        <span class="badge bg-info skill-badge">Urdu (Native or Bilingual)</span>
-                        <span class="badge bg-info skill-badge">German (A1)</span>
-                    </div>
-                    
-                    <h4 class="mt-3">Certifications</h4>
-                    <div class="mb-3">
-                        <span class="badge bg-warning text-dark skill-badge">CSALT Research Internship</span>
-                        <span class="badge bg-warning text-dark skill-badge">The Complete Python Pro Bootcamp</span>
-                        <span class="badge bg-warning text-dark skill-badge">The Complete Full-Stack Web Development Bootcamp</span>
-                        <span class="badge bg-warning text-dark skill-badge">German Language (A1)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="certifications" class="section">
-            <h2 class="mb-4"><i class="bi bi-award-fill me-2"></i>Certifications</h2>
-            <div class="certificate-list">
-                <div class="certificate-item">
-                    <h4>CSALT Research Internship</h4>
-                    <p class="text-muted">Issued by <a href="https://lums.edu.pk/" target="_blank" >University of Management Sciences</a></p>
-                    <a href="Intership_Certificate.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
-                        <i class="bi bi-file-earmark-pdf"></i> View Certificate
-                    </a>
-                </div>
-                <div class="certificate-item">
-                    <h4>The Complete Python Pro Bootcamp</h4>
-                    <p class="text-muted">Issued by <a href="https://www.udemy.com/" target="_blank">Udemy</a></p>
-                    <a href="Python_Certificate.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
-                        <i class="bi bi-file-earmark-pdf"></i> View Certificate
-                    </a>
-                </div>
-                <div class="certificate-item">
-                    <h4>The Complete Full-Stack Web Development Bootcamp</h4>
-                    <p class="text-muted">Issued by <a href="https://www.udemy.com/" target="_blank">Udemy</a></p>
-                    <a href="Web_Certificate.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
-                        <i class="bi bi-file-earmark-pdf"></i> View Certificate
-                    </a>
-                </div>
-                <div class="certificate-item">
-                    <h4>German Language (A1)</h4>
-                    <p class="text-muted">Issued by <a href="https://learngerman.dw.com/en/learn-german/s-9528" target="_blank">Deutsche Welle</a></p>
-                    <a href="German_cert.pdf" target="_blank" class="btn btn-outline-primary btn-sm">
-                        <i class="bi bi-file-earmark-pdf"></i> View Certificate
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section">
-            <h2 class="mb-4"><i class="bi bi-book me-2"></i>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h4>Bachelor's degree, Computer Science</h4>
-                    <h5 class="text-muted">Sir Syed CASE Institute of Technology • September 2024 - September 2028</h5>
-                </div>
-                <div class="timeline-item">
-                    <h4>Beaconhouse</h4>
-                    <h5 class="text-muted">2023 - 2024</h5>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2 class="mb-4"><i class="bi bi-envelope-fill me-2"></i>Contact Me</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Get in Touch</h5>
-                            <p class="card-text">Feel free to reach out for job opportunities or collaborations!</p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="bi bi-telephone me-2"></i> +92 3353 777733</li>
-                                <li class="mb-2"><i class="bi bi-envelope me-2"></i> arhamyunus@outlook.com</li>
-                                <li class="mb-2"><i class="bi bi-linkedin me-2"></i><a href="https://www.linkedin.com/in/arham-yunus-awan" target="_blank">linkedin.com/in/arham-yunus-awan</a></li>
-                                <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Islamabad, Pakistan</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="text-center py-4 text-muted">
-            <p>&copy; 2025 Arham Yunus Awan. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/arham-yunus-awan" target="_blank" class="text-decoration-none mx-2"><i class="bi bi-linkedin fs-4"></i></a>
-                <a href="mailto:civilizqt@gmail.com" target="_blank" class="text-decoration-none mx-2"><i class="bi bi-envelope fs-4"></i></a>
-            </div>
-        </footer>
+        </div>
     </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="main.js"></script>
+<!-- ── EXPERIENCE ─────────────────────────────────────────── -->
+<section id="experience">
+    <div class="section-wrap fade-in">
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <h2 class="section-title">Experience</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="exp-grid">
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-role">AWS Serverless Engineer · Cloud & Genesys Integration Specialist</div>
+                    <div class="exp-period">Apr 2024 — Present · 2 yrs</div>
+                </div>
+                <div class="exp-company"><a href="https://astrocloud.co.nz" target="_blank">Astro Cloud Ltd</a> · Part-time · Remote</div>
+                <div class="exp-location">📍 Hamilton, Waikato, New Zealand</div>
+                <div class="exp-desc">New Zealand based technology company specializing in cloud solutions and Genesys Cloud contact center implementations.</div>
+                <ul class="exp-bullets">
+                    <li>Develop and optimize AWS serverless solutions using Lambda, DynamoDB, API Gateway, and S3 for production environments</li>
+                    <li>Integrate Genesys Cloud APIs with AWS services for real-time contact center automation and workflows</li>
+                    <li>Build and maintain cloud data pipelines using AWS Athena and Glue for business analytics</li>
+                    <li>Develop web applications and interfaces supporting Genesys Cloud integrations</li>
+                    <li>Automate API-driven workflows improving operational efficiency across client systems</li>
+                    <li>Implement cloud security best practices for high-traffic production applications</li>
+                    <li>Work independently in a fully remote international environment delivering solutions for NZ based clients</li>
+                </ul>
+            </div>
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div class="exp-role">Project Intern — ML Data Processing</div>
+                    <div class="exp-period">Aug 2021 — Mar 2022 · 8 mos</div>
+                </div>
+                <div class="exp-company">Lahore University of Management Sciences (LUMS)</div>
+                <div class="exp-location">📍 Lahore, Punjab, Pakistan</div>
+                <ul class="exp-bullets">
+                    <li>Processed and cleaned Urdu audio data collected from volunteers for training a speech recognition ML model</li>
+                    <li>Applied audio preprocessing — noise reduction, trimming, and format conversion at scale</li>
+                    <li>Annotated and organized large datasets ensuring quality training data for speech recognition models</li>
+                    <li>Supported project coordination, data management, and documentation tasks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── PROJECTS ───────────────────────────────────────────── -->
+<section id="projects">
+    <div class="section-wrap fade-in">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <h2 class="section-title">Projects</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card featured">
+                <div class="project-icon">🕌</div>
+                <div class="project-name">Quran Guide — AI RAG Application</div>
+                <div class="project-desc">AI-powered Quran guidance app built using Retrieval Augmented Generation (RAG) architecture. Users ask questions and receive answers grounded in Quranic verses. Fully deployed on AWS S3 as a live production application. Version 2 actively in development.</div>
+                <div class="project-tags">
+                    <span class="tag tag-cyan">Python</span><span class="tag tag-cyan">RAG</span><span class="tag tag-cyan">AWS S3</span><span class="tag tag-purple">NLP</span><span class="tag tag-purple">AI/ML</span>
+                </div>
+                <div class="project-links">
+                    <a href="http://quran-guide-app.s3-website.us-east-2.amazonaws.com/" target="_blank" class="project-link">↗ Live Demo</a>
+                    <a href="https://github.com/Arham-Yunus-Awan" target="_blank" class="project-link project-link-code">⌥ GitHub</a>
+                </div>
+            </div>
+            <div class="project-card featured">
+                <div class="project-icon">📐</div>
+                <div class="project-name">3D Geometry Visualizer</div>
+                <div class="project-desc">Built to solve a real personal need — visualizing complex 3D geometric regions during Multivariable Calculus coursework. Supports condition-based plotting and equation mode for surfaces like spheres, paraboloids, and planes. Interactive rotate, zoom, and screenshot capture.</div>
+                <div class="project-tags">
+                    <span class="tag tag-orange">JavaScript</span><span class="tag tag-orange">3D Graphics</span><span class="tag tag-green">Math Viz</span><span class="tag tag-green">GitHub Pages</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://arham-yunus-awan.github.io/3d-geometry-visualizer/" target="_blank" class="project-link">↗ Live Demo</a>
+                    <a href="https://github.com/Arham-Yunus-Awan/3d-geometry-visualizer" target="_blank" class="project-link project-link-code">⌥ GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">📊</div>
+                <div class="project-name">AI/ML Interactive Dashboard</div>
+                <div class="project-desc">End-to-end ML pipeline built as Programming for AI final project — deployed live via Streamlit. Full pipeline: data cleaning, model training, evaluation, and interactive results visualization. Demonstrates complete ML workflow from raw data to deployable insights.</div>
+                <div class="project-tags">
+                    <span class="tag tag-cyan">Python</span><span class="tag tag-purple">Streamlit</span><span class="tag tag-purple">Scikit-learn</span><span class="tag tag-green">Pandas</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://paiproject-arham.streamlit.app/" target="_blank" class="project-link">↗ Live Demo</a>
+                    <a href="https://github.com/Arham-Yunus-Awan/pai_project" target="_blank" class="project-link project-link-code">⌥ GitHub</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">🇩🇪</div>
+                <div class="project-name">German Vocabulary Practice App</div>
+                <div class="project-desc">Self-built language learning tool supporting personal German studies — turning vocabulary practice into an engaging timed challenge. Features TTS pronunciation, 60-second Time Attack mode, and perfect-run board-clear challenge. Built with React.</div>
+                <div class="project-tags">
+                    <span class="tag tag-orange">React</span><span class="tag tag-orange">CSS Modules</span><span class="tag tag-green">TTS API</span><span class="tag tag-green">GitHub Pages</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://arham-yunus-awan.github.io/german-word-practice/" target="_blank" class="project-link">↗ Live Demo</a>
+                    <a href="https://github.com/Arham-Yunus-Awan/german-word-practice" target="_blank" class="project-link project-link-code">⌥ GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────────── -->
+<section id="skills">
+    <div class="section-wrap fade-in">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Skills</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-card-title">☁️ Cloud & AWS</div>
+                <div class="skill-tags">
+                    <span class="tag tag-cyan">AWS Lambda</span><span class="tag tag-cyan">API Gateway</span><span class="tag tag-cyan">DynamoDB</span><span class="tag tag-cyan">AWS S3</span><span class="tag tag-cyan">AWS Glue</span><span class="tag tag-cyan">AWS Athena</span><span class="tag tag-cyan">CloudFormation</span><span class="tag tag-cyan">Amazon Connect</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-title">🤖 AI & ML</div>
+                <div class="skill-tags">
+                    <span class="tag tag-purple">Python</span><span class="tag tag-purple">RAG Architecture</span><span class="tag tag-purple">Scikit-learn</span><span class="tag tag-purple">Pandas</span><span class="tag tag-purple">Jupyter</span><span class="tag tag-purple">Streamlit</span><span class="tag tag-purple">AWS Skill Builder</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-title">📞 Genesys & Integration</div>
+                <div class="skill-tags">
+                    <span class="tag tag-green">Genesys Cloud</span><span class="tag tag-green">Genesys APIs</span><span class="tag tag-green">Contact Center</span><span class="tag tag-green">API Design</span><span class="tag tag-green">Workflow Automation</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-title">💻 Development</div>
+                <div class="skill-tags">
+                    <span class="tag tag-orange">React</span><span class="tag tag-orange">Node.js</span><span class="tag tag-orange">Flask</span><span class="tag tag-orange">JavaScript</span><span class="tag tag-orange">HTML/CSS</span><span class="tag tag-orange">GitHub</span><span class="tag tag-orange">REST APIs</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-title">🌍 Languages</div>
+                <div class="skill-tags">
+                    <span class="tag tag-cyan">English — Professional</span><span class="tag tag-green">Urdu — Native</span><span class="tag tag-purple">German — A2 (In Progress)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── EDUCATION ──────────────────────────────────────────── -->
+<section id="education">
+    <div class="section-wrap fade-in">
+        <div class="section-header">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Education</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="edu-grid">
+            <div class="edu-card">
+                <div class="edu-degree">BS Artificial Intelligence</div>
+                <div class="edu-school">Sir Syed CASE Institute of Technology</div>
+                <div class="edu-period">Sep 2024 — Sep 2028 · In Progress</div>
+                <div class="edu-detail">
+                    <span class="edu-detail-label">CGPA</span>
+                    <span class="cgpa-badge">3.73 / 4.0</span>
+                </div>
+                <div class="edu-detail" style="margin-top:0.5rem">
+                    <span class="edu-detail-label">Trend</span>
+                    <span style="font-size:0.82rem; color:var(--accent3)">3.49 → 3.82 → 3.84 ↑ Improving</span>
+                </div>
+                <div class="edu-detail" style="margin-top:0.5rem; align-items:flex-start; flex-direction:column; gap:0.4rem;">
+                    <span class="edu-detail-label">Coursework</span>
+                    <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.2rem">
+                        <span class="tag tag-purple">Multivariable Calculus</span>
+                        <span class="tag tag-purple">Programming for AI</span>
+                        <span class="tag tag-purple">Data Structures</span>
+                    </div>
+                </div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-degree">A Levels</div>
+                <div class="edu-school">Beaconhouse School System</div>
+                <div class="edu-period">2023 — 2024</div>
+                <div class="edu-detail" style="flex-direction:column; align-items:flex-start; gap:0.5rem; margin-top:0.5rem">
+                    <span class="edu-detail-label">Grades</span>
+                    <div class="grade-row">
+                        <div class="grade-item"><span class="grade-subject">Mathematics</span><span class="grade-val">A</span></div>
+                        <div class="grade-item"><span class="grade-subject">Computer Sci</span><span class="grade-val">B</span></div>
+                        <div class="grade-item"><span class="grade-subject">Physics</span><span class="grade-val">B</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CERTIFICATIONS ─────────────────────────────────────── -->
+<section id="certifications">
+    <div class="section-wrap fade-in">
+        <div class="section-header">
+            <span class="section-num">05</span>
+            <h2 class="section-title">Certifications</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="certs-grid">
+            <div class="cert-card">
+                <div class="cert-issuer">LUMS</div>
+                <div class="cert-name">CSALT Research Internship</div>
+                <a href="Intership_Certificate.pdf" target="_blank" class="cert-link">↗ View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-issuer">Udemy</div>
+                <div class="cert-name">The Complete Python Pro Bootcamp</div>
+                <a href="Python_Certificate.pdf" target="_blank" class="cert-link">↗ View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-issuer">Udemy</div>
+                <div class="cert-name">The Complete Full-Stack Web Development Bootcamp</div>
+                <a href="Web_Certificate.pdf" target="_blank" class="cert-link">↗ View Certificate</a>
+            </div>
+            <div class="cert-card">
+                <div class="cert-issuer">Deutsche Welle</div>
+                <div class="cert-name">German Language — A1</div>
+                <a href="German_cert.pdf" target="_blank" class="cert-link">↗ View Certificate</a>
+            </div>
+            <div class="cert-card" style="border-style:dashed; opacity:0.7;">
+                <div class="cert-issuer">Amazon Web Services</div>
+                <div class="cert-name">AWS Certification — AI/ML Learning Plan</div>
+                <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--accent); margin-top:auto;">⏳ In Progress</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── INTERESTS ──────────────────────────────────────────── -->
+<section id="interests">
+    <div class="section-wrap fade-in">
+        <div class="section-header">
+            <span class="section-num">06</span>
+            <h2 class="section-title">Beyond Work</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="interests-grid">
+            <div class="interest-card"><div class="interest-icon">♟️</div><div><div class="interest-name">Chess</div><div class="interest-detail">FIDE Rated Player</div></div></div>
+            <div class="interest-card"><div class="interest-icon">🎵</div><div><div class="interest-name">Music Production</div><div class="interest-detail">Beat Creation</div></div></div>
+            <div class="interest-card"><div class="interest-icon">🏐</div><div><div class="interest-name">Volleyball</div><div class="interest-detail">Regular Player</div></div></div>
+            <div class="interest-card"><div class="interest-icon">🇩🇪</div><div><div class="interest-name">German Language</div><div class="interest-detail">A2 Level · In Progress</div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────────── -->
+<section id="contact">
+    <div class="section-wrap fade-in">
+        <div class="section-header">
+            <span class="section-num">07</span>
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-wrap">
+            <div class="contact-info">
+                <h3>Let's work together</h3>
+                <p>Open to collaborations, research opportunities, and international career conversations. Feel free to reach out!</p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">✉</div>
+                        <div class="contact-item-text">
+                            <div class="contact-item-label">Email</div>
+                            <a href="mailto:arhamyunus@outlook.com">arhamyunus@outlook.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">in</div>
+                        <div class="contact-item-text">
+                            <div class="contact-item-label">LinkedIn</div>
+                            <a href="https://www.linkedin.com/in/arham-yunus-awan" target="_blank">linkedin.com/in/arham-yunus-awan</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">⌥</div>
+                        <div class="contact-item-text">
+                            <div class="contact-item-label">GitHub</div>
+                            <a href="https://github.com/Arham-Yunus-Awan" target="_blank">github.com/Arham-Yunus-Awan</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div class="contact-item-text">
+                            <div class="contact-item-label">Location</div>
+                            <span>Islamabad, Pakistan · Open to Remote</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-input" type="text" id="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" type="email" id="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-textarea" id="message" required placeholder="Tell me about the opportunity..."></textarea>
+                </div>
+                <button type="submit" class="form-btn">Send Message →</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer>
+    <span class="footer-text">© <script>document.write(new Date().getFullYear())</script> Arham Yunus Awan · Built with intention</span>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/arham-yunus-awan" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Arham-Yunus-Awan" target="_blank">GitHub</a>
+        <a href="mailto:arhamyunus@outlook.com">Email</a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
