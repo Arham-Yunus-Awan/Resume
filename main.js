@@ -3,7 +3,7 @@ const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
 // Load saved theme — default is dark
-const savedTheme = localStorage.getItem('theme') || 'dark';
+const savedTheme = localStorage.getItem('theme') || 'light';
 if (savedTheme === 'light') {
     body.classList.add('light');
     themeToggle.textContent = '☀️';
@@ -108,3 +108,6 @@ window.addEventListener('scroll', () => {
             : '';
     });
 });
+
+// ── DYNAMIC FOOTER YEAR ───────────────────────────────
+document.getElementById('footerYear').textContent = new Date().getFullYear();
