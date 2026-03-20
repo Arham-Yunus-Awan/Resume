@@ -393,8 +393,9 @@ h1.hero-name span {
 .cert-card-badge:hover { border-color: rgba(0,229,255,0.4) !important; }
 .cert-badge-embed { display: flex; justify-content: center; align-items: center; padding: 0.25rem 0; }
 
+
 .cert-issuer { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
-.cert-name { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; line-height: 1.3; }
+.cert-name { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; line-height: 1.3; min-height: 4.2rem; }
 .cert-link { font-family: var(--font-mono); font-size: 0.72rem; color: #fb923c; text-decoration: none; letter-spacing: 0.05em; display: flex; align-items: center; gap: 0.3rem; transition: opacity 0.2s; margin-top: auto; }
 .cert-link:hover { opacity: 0.7; }
 
